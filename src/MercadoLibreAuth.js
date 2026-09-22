@@ -3,7 +3,7 @@ import React from 'react';
 function MercadoLibreAuth({ onConnected }) {
   const handleConnect = () => {
     const clientId = '1096957813719713';
-   const redirectUri = 'https://ml-dashboard-khaki.vercel.app/callback';
+    const redirectUri = 'https://ml-dashboard-khaki.vercel.app/callback';
     const state = Math.random().toString(36).substring(7);
 
     // Guardar state en localStorage para validación después
@@ -16,7 +16,7 @@ function MercadoLibreAuth({ onConnected }) {
 
   return (
     <button onClick={handleConnect} className="ml-auth-btn">
-      Conectar Mercado Libre
+      🔗 Conectar Mercado Libre
     </button>
   );
 }
