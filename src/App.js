@@ -32,7 +32,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/callback" element={<Callback />} />
-        <Route path="/" element={user ? <Dashboard user={user} onLogout={handleLogout} /> : <Login />} />
+        <Route path="/" element={user ? <Dashboard user={user} onLogout={handleLogout} /> : <Navigate to="/login" />} />
+        <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
